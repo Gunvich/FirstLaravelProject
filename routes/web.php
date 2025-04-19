@@ -18,5 +18,6 @@ Route::get('/', [MainController::class, 'home']);
 
 Route::get('/about', [MainController::class, 'about']);
 
+Route::get('/review', [MainController::class, 'review']);
 
 //Route::get('/user/{id}/{name}', function ($id, $name) { return view('about');});
