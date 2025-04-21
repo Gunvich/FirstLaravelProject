@@ -20,4 +20,14 @@ class MainController extends Controller
     {
         return view('review');
     }
+    public function review_check(Request $request)
+    {
+        $valid = $request->validate(
+            [
+                'email' => 'required|email:rfc',
+                'subject' => 'required|min:5|max:100',
+                'message' => 'required|min:5|max:500',
+            ]
+        );
+    }
 }
